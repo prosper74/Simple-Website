@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react"
+import React from "react"
 import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/swiper.min.css"
 import "swiper/components/effect-coverflow/effect-coverflow.min.css"
@@ -34,7 +34,10 @@ export default function Slider() {
               industry.
             </p>
             <button>View Project</button>
-            <img src="https://assets.justinmind.com/wp-content/uploads/2020/08/distance-learning-app-mockup.png" />
+            <img
+              src="https://assets.justinmind.com/wp-content/uploads/2020/08/distance-learning-app-mockup.png"
+              alt=""
+            />
           </div>
         </SwiperSlide>
         <SwiperSlide>
@@ -45,7 +48,10 @@ export default function Slider() {
               industry.
             </p>
             <button>View Project</button>
-            <img src="https://img.freepik.com/free-psd/course-app-desgin_242034-22.jpg?size=626&ext=jpg" />
+            <img
+              src="https://img.freepik.com/free-psd/course-app-desgin_242034-22.jpg?size=626&ext=jpg"
+              alt=""
+            />
           </div>
         </SwiperSlide>
         <SwiperSlide className="details">
@@ -56,7 +62,10 @@ export default function Slider() {
           </p>
           <button>View Project</button>
 
-          <img src="https://img.freepik.com/free-psd/course-app-desgin_242034-22.jpg?size=626&ext=jpg" />
+          <img
+            src="https://img.freepik.com/free-psd/course-app-desgin_242034-22.jpg?size=626&ext=jpg"
+            alt=""
+          />
         </SwiperSlide>
         <SwiperSlide>
           <div className="details">
@@ -67,7 +76,10 @@ export default function Slider() {
             </p>
             <button>View Project</button>
 
-            <img src="https://img.freepik.com/free-psd/course-app-desgin_242034-22.jpg?size=626&ext=jpg" />
+            <img
+              src="https://img.freepik.com/free-psd/course-app-desgin_242034-22.jpg?size=626&ext=jpg"
+              alt=""
+            />
           </div>
         </SwiperSlide>
         <SwiperSlide>
@@ -79,7 +91,10 @@ export default function Slider() {
             </p>
             <button>View Project</button>
 
-            <img src="https://img.freepik.com/free-psd/course-app-desgin_242034-22.jpg?size=626&ext=jpg" />
+            <img
+              src="https://img.freepik.com/free-psd/course-app-desgin_242034-22.jpg?size=626&ext=jpg"
+              alt=""
+            />
           </div>
         </SwiperSlide>
         <SwiperSlide>
@@ -91,7 +106,10 @@ export default function Slider() {
             </p>
             <button>View Project</button>
 
-            <img src="https://assets.justinmind.com/wp-content/uploads/2020/08/distance-learning-app-mockup.png" />
+            <img
+              src="https://assets.justinmind.com/wp-content/uploads/2020/08/distance-learning-app-mockup.png"
+              alt=""
+            />
           </div>
         </SwiperSlide>
         <SwiperSlide>
@@ -103,7 +121,10 @@ export default function Slider() {
             </p>
             <button>View Project</button>
 
-            <img src="https://assets.justinmind.com/wp-content/uploads/2020/08/distance-learning-app-mockup.png" />
+            <img
+              src="https://assets.justinmind.com/wp-content/uploads/2020/08/distance-learning-app-mockup.png"
+              alt=""
+            />
           </div>
         </SwiperSlide>
         <SwiperSlide>
@@ -115,7 +136,10 @@ export default function Slider() {
             </p>
             <button>View Project</button>
 
-            <img src="https://assets.justinmind.com/wp-content/uploads/2020/08/distance-learning-app-mockup.png" />
+            <img
+              src="https://assets.justinmind.com/wp-content/uploads/2020/08/distance-learning-app-mockup.png"
+              alt=""
+            />
           </div>
         </SwiperSlide>
         <SwiperSlide>
@@ -127,7 +151,10 @@ export default function Slider() {
             </p>
             <button>View Project</button>
 
-            <img src="https://assets.justinmind.com/wp-content/uploads/2020/08/distance-learning-app-mockup.png" />
+            <img
+              src="https://assets.justinmind.com/wp-content/uploads/2020/08/distance-learning-app-mockup.png"
+              alt=""
+            />
           </div>
         </SwiperSlide>
       </Swiper>

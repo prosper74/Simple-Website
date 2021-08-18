@@ -1,33 +1,37 @@
+import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
 import * as style from "../../styles/about.module.css"
 
-function About() {
+export default function About() {
+  const data = useStaticQuery(graphql`
+    query aboutQuery {
+      site {
+        siteMetadata {
+          aboutDescription
+          aboutSubtitle
+          aboutTitle
+        }
+      }
+    }
+  `)
+
+  const { aboutDescription, aboutTitle, aboutSubtitle } = data.site.siteMetadata
+
   return (
-    <div className={style.about} id="about">     
-        <h2>About Brand</h2>
-        <p className={style.subtitle}>Subtitle or slogan goes here</p>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero
-          reprehenderit nostrum omnis odit beatae mollitia sint pariatur eum
-          fugit reiciendis vitae harum, aut, expedita adipisci, odio dolor
-          tempora? Quia, voluptas. Lorem ipsum dolor, sit amet consectetur
-          adipisicing elit. Libero reprehenderit nostrum omnis odit beatae
-          mollitia sint pariatur eum fugit reiciendis vitae harum, aut, expedita
-          adipisci, odio dolor tempora? Quia, voluptas.Lorem ipsum dolor, sit
-          amet consectetur adipisicing elit. Libero reprehenderit nostrum omnis
-          odit beatae mollitia sint pariatur eum fugit reiciendis vitae harum,
-          aut, expedita adipisci, odio dolor tempora? Quia, voluptas.Lorem ipsum
-          dolor, sit amet consectetur adipisicing elit. Libero reprehenderit
-          nostrum omnis odit beatae mollitia sint pariatur eum fugit reiciendis
-          vitae harum, aut, expedita adipisci, odio dolor tempora? Quia,
-          voluptas.Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-        </p>     
+    <div className={style.about} id="about">
+      <h2>{aboutTitle}</h2>
+      <p className={style.subtitle}>{aboutSubtitle}</p>
+      <p className={style.description}>{aboutDescription}</p>
 
       <h2 className={style.teamSection}>Our Team</h2>
       <div className={style.row}>
         <div className={style.column}>
           <div className={style.card}>
-            <img src="https://personalexcellence.co/files/ceo.jpg" alt="Jane" className={style.cardImage} />
+            <img
+              src="https://personalexcellence.co/files/ceo.jpg"
+              alt="Jane"
+              className={style.cardImage}
+            />
             <div className={style.container}>
               <h2>Jane Doe</h2>
               <p className={style.title}>CEO & Founder</p>
@@ -42,7 +46,11 @@ function About() {
 
         <div className={style.column}>
           <div className={style.card}>
-            <img src="https://personalexcellence.co/files/ceo.jpg" alt="Mike" className={style.cardImage} />
+            <img
+              src="https://personalexcellence.co/files/ceo.jpg"
+              alt="Mike"
+              className={style.cardImage}
+            />
             <div className={style.container}>
               <h2>Mike Ross</h2>
               <p className={style.title}>Art Director</p>
@@ -57,7 +65,11 @@ function About() {
 
         <div className={style.column}>
           <div className={style.card}>
-            <img src="https://personalexcellence.co/files/ceo.jpg" alt="John" className={style.cardImage} />
+            <img
+              src="https://personalexcellence.co/files/ceo.jpg"
+              alt="John"
+              className={style.cardImage}
+            />
             <div className={style.container}>
               <h2>John Doe</h2>
               <p className={style.title}>Designer</p>
@@ -73,5 +85,3 @@ function About() {
     </div>
   )
 }
-
-export default About

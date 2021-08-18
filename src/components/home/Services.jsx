@@ -1,89 +1,45 @@
 import React from "react"
 import * as style from "../../styles/service.module.css"
-import { UilExternalLinkAlt } from "@iconscout/react-unicons"
+import { UilExternalLinkAlt, UilAirplay } from "@iconscout/react-unicons"
+import { graphql, Link, useStaticQuery } from "gatsby"
 
 function Services() {
+  // Graphql query to fetch the services from the .md files
+  const data = useStaticQuery(graphql`
+    query servicesQuery {
+      allMarkdownRemark(
+        filter: { frontmatter: { stack: { eq: "Services" } } }
+      ) {
+        nodes {
+          frontmatter {
+            title
+            description
+          }
+          id
+        }
+      }
+    }
+  `)
+  const servicesData = data.allMarkdownRemark.nodes
+
   return (
     <div className={style.services}>
       <div className={style.servicesContainer}>
-        <a href="#" className={style.serviceContent}>
-          <div>
-            <h3 className={style.serviceTitle}>My title jodjs iudhosg</h3>
-            <p className={style.serviceDescription}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex,
-              reprehenderit optio, explicabo harum fugiat .
-            </p>
-          </div>
-          <div className={style.viewMore}>
-            View More
-            <UilExternalLinkAlt size="15" className={style.viewMoreIcon} />
-          </div>
-        </a>
-				<a href="#" className={style.serviceContent}>
-          <div>
-            <h3 className={style.serviceTitle}>My title jodjs iudhosg</h3>
-            <p className={style.serviceDescription}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex,
-              reprehenderit optio, explicabo harum fugiat .
-            </p>
-          </div>
-          <div className={style.viewMore}>
-            View More
-            <UilExternalLinkAlt size="15" className={style.viewMoreIcon} />
-          </div>
-        </a>
-				<a href="#" className={style.serviceContent}>
-          <div>
-            <h3 className={style.serviceTitle}>My title jodjs iudhosg</h3>
-            <p className={style.serviceDescription}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex,
-              reprehenderit optio, explicabo harum fugiat .
-            </p>
-          </div>
-          <div className={style.viewMore}>
-            View More
-            <UilExternalLinkAlt size="15" className={style.viewMoreIcon} />
-          </div>
-        </a>
-				<a href="#" className={style.serviceContent}>
-          <div>
-            <h3 className={style.serviceTitle}>My title jodjs iudhosg</h3>
-            <p className={style.serviceDescription}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex,
-              reprehenderit optio, explicabo harum fugiat .
-            </p>
-          </div>
-          <div className={style.viewMore}>
-            View More
-            <UilExternalLinkAlt size="15" className={style.viewMoreIcon} />
-          </div>
-        </a>
-				<a href="#" className={style.serviceContent}>
-          <div>
-            <h3 className={style.serviceTitle}>My title jodjs iudhosg</h3>
-            <p className={style.serviceDescription}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex,
-              reprehenderit optio, explicabo harum fugiat .
-            </p>
-          </div>
-          <div className={style.viewMore}>
-            View More
-            <UilExternalLinkAlt size="15" className={style.viewMoreIcon} />
-          </div>
-        </a>
-				<a href="#" className={style.serviceContent}>
-          <div>
-            <h3 className={style.serviceTitle}>My title jodjs iudhosg</h3>
-            <p className={style.serviceDescription}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex,
-              reprehenderit optio, explicabo harum fugiat .
-            </p>
-          </div>
-          <div className={style.viewMore}>
-            View More
-            <UilExternalLinkAlt size="15" className={style.viewMoreIcon} />
-          </div>
-        </a>
+        {servicesData.map(d => (
+          <Link to="/#" className={style.serviceContent} key={d.id}>
+            <UilAirplay className={style.serviceIcon} />
+            <div>
+              <h3 className={style.serviceTitle}>{d.frontmatter.title}</h3>
+              <p className={style.serviceDescription}>
+                {d.frontmatter.description}
+              </p>
+            </div>
+            <div className={style.viewMore}>
+              View More
+              <UilExternalLinkAlt size="15" className={style.viewMoreIcon} />
+            </div>
+          </Link>
+        ))}
       </div>
     </div>
   )
