@@ -29,10 +29,8 @@ function Services() {
           <Link to="/#" className={style.serviceContent} key={d.id}>
             <UilAirplay className={style.serviceIcon} />
             <div>
-              <h3 className={style.serviceTitle}>{d.frontmatter.title}</h3>
-              <p className={style.serviceDescription}>
-                {d.frontmatter.description}
-              </p>
+              <h3>{d.frontmatter.title}</h3>
+              <p>{d.frontmatter.description}</p>
             </div>
             <div className={style.viewMore}>
               View More

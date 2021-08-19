@@ -55,4 +55,8 @@ module.exports = {
     aboutDescription:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero reprehenderit nostrum     tempora? Quia, voluptas. Lorem ipsum dolor, sit amet consectetur   adipisicing elit. Libero reprehenderit nostrum omnis odit beatae mollitia sint pariatur eum fugit reiciendis vitae harum, aut, expedita   adipisci, odio dolor tempora? Quia, voluptas.Lorem ipsum dolor, sit  amet consectetur adipisicing elit. Libero reprehenderit nostrum omnis   odit beatae mollitia sint pariatur eum fugit reiciendis vitae harum, aut, expedita adipisci, odio dolor tempora? Quia, voluptas.Lorem ipsum  dolor, sit amet consectetur adipisicing elit. Libero reprehenderit nostrum omnis odit beatae mollitia sint pariatur eum fugit reiciendis   vitae harum, aut, expedita adipisci, odio dolor tempora? Quia, voluptas.Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
   },
+
+  flags: {
+    THE_FLAG: false,
+  },
 }

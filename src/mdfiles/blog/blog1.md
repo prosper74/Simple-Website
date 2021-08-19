@@ -1,7 +1,7 @@
 ---
 stack: Blog
 title: The new Windows10
-excerpt: Lorem ninja ipsum dolor sit amet, consectetuer adipiscing elit, sed diam ut laoreet dolore magna aliquam erat volutpat.
+excerpt: Lorem ninja ipsum dolor sit amet, consectetuer adipiscing elit, volutpat.
 slug: the-new-windows10
 featuredImage: ../../images/blog/blog1.jpg
 date: 2021-01-01T00:00:00+00:00

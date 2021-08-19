@@ -1,7 +1,7 @@
 ---
 stack: Blog
 title: Gatsby js will make you awe
-excerpt: Lorem ninja ipsum dolor sit amet, consectetuer adipiscing elit, sed diam ut laoreet dolore magna aliquam erat volutpat.
+excerpt: Lorem ninja ipsum dolor sit amet, consectetuer adipiscing elit, sed diam .
 slug: gatsbyjs-will-make-you-awe
 featuredImage: ../../images/blog/blog2.jpg
 date: 2021-02-01T00:00:00+00:00

@@ -1,11 +1,11 @@
 import React from "react"
+import BlogPosts from "../components/blog/BlogPosts"
 import Layout from "../components/common/Layout"
-import Blog from "../components/home/Blog"
 
-export default function Home() {
+export default function BlogPage() {
   return (
     <Layout>
-      <Blog />
+      <BlogPosts />
     </Layout>
   )
 }

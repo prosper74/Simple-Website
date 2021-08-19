@@ -14,8 +14,8 @@ function Contact() {
   return (
     <section className={style.contact} id="contact">
       <div className={style.contactContainer}>
-        <div className={style.leftContent}>
-          <div className={style.header}>
+        <div>
+          <div>
             <h2>Get in touch</h2>
             <p className={style.subtitle}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex,
