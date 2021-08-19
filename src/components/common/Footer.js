@@ -30,7 +30,7 @@ function Footer() {
             <div>
               <b>Menu</b>
               <Link to="/#home">Home</Link>
-              <Link to="/#profile">Profile</Link>
+              <Link to="/#about">Profile</Link>
               <Link to="/#projects">Projects</Link>
               <Link to="/blog">Blog</Link>
               <Link to="/#contact">Contact</Link>
