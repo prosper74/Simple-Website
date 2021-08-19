@@ -22,6 +22,10 @@ To deploy, run `gatsby build`
 - Gatsby JS
 - Swiper js - for the sliders
 
+## Link
+
+Access app via https://gatsbyappbyprosper.netlify.app/
+
 ## Author
 
 [Prosper Atu]
