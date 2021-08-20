@@ -3,6 +3,7 @@ import * as style from "../../styles/blogposts.module.css"
 import { UilExternalLinkAlt, UilCalender } from "@iconscout/react-unicons"
 import { graphql, Link, useStaticQuery } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import {timeSince} from "../dateFunction"
 
 export default function BlogPosts() {
   // Graphql query to fetch the blog posts from the .md files
@@ -60,8 +61,8 @@ export default function BlogPosts() {
                 <UilExternalLinkAlt size="15" className={style.readMoreIcon} />
               </div>
               <div className={style.readMore}>
-                <UilCalender size="15" className={style.viewMoreIcon} />
-                {new Date(d.frontmatter.date).toDateString()}
+                <UilCalender size="15" className={style.viewMoreIcon} /> &nbsp;
+                {timeSince(new Date(d.frontmatter.date))} ago
               </div>
             </div>
           </Link>

@@ -12,6 +12,7 @@ import IconButton from "@material-ui/core/IconButton"
 import Tooltip from "@material-ui/core/Tooltip"
 import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { timeSince } from "../components/dateFunction"
 
 export default function SinglePost({ data }) {
   const post = data.markdownRemark
@@ -29,9 +30,7 @@ export default function SinglePost({ data }) {
               <em>Author: Prosper Atu</em>
             </span>
             <div className={style.metadataInfo}>
-              <span>
-                Posted: {new Date(post.frontmatter.date).toDateString()}
-              </span>
+              <span>{timeSince(new Date(post.frontmatter.date))} ago</span>
               <Tooltip title="Bookmark" className={style.bookmarkIcon}>
                 <IconButton aria-label="delete">
                   <Bookmark />
