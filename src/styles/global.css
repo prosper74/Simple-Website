@@ -19,6 +19,15 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
   }
+
+  .loader {
+    text-align: center;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    display: block;
+    margin: 20rem auto;
+  }
   
   *,
   *::before,
