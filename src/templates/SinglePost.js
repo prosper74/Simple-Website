@@ -85,7 +85,7 @@ export default function SinglePost({ data }) {
 }
 
 export const query = graphql`
-  query PostTemplateQuery($slug: String!) {
+  query PostTemplateQuery($slug: String) {
     markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       frontmatter {
         date
