@@ -7,7 +7,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 function HomeBlog() {
   // Graphql query to fetch the blog posts from the .md files
   const data = useStaticQuery(graphql`
-    query MyQuery {
+    query HomeBlogQuery {
       allMarkdownRemark(
         filter: { frontmatter: { stack: { eq: "Blog" } } }
         limit: 3
@@ -31,6 +31,7 @@ function HomeBlog() {
             slug
             title
           }
+          id
         }
       }
     }
