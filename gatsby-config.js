@@ -46,6 +46,22 @@ module.exports = {
         path: `${__dirname}/src/mdfiles/services`,
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: "Brand",
+        short_name: "This is my first Gatsby app",
+        description:
+          "The application does cool things and makes your life better.",
+        start_url: "/",
+        background_color: "#F7F7F7",
+        theme_color: "#6633FF",
+        display: "standalone",
+        icon: "src/images/favicon.png",
+        crossOrigin: `use-credentials`,
+      },
+    },
+    `gatsby-plugin-offline`,
   ],
   siteMetadata: {
     title: "Brand",
